@@ -1,3 +1,5 @@
+import 'package:diet_camera_clone/User.dart';
+import 'package:diet_camera_clone/pages/profile_modify.dart';
 import 'package:flutter/material.dart';
 
 class SettingPage extends StatelessWidget {
@@ -15,24 +17,32 @@ class SettingPage extends StatelessWidget {
       ),
       body: ListView(
         children: <Widget>[
-         Container(
-           child: Padding(
-             padding: const EdgeInsets.all(50.0),
-             child: Column(
-               children: <Widget>[
-                 Container(
-                   width: 150,
-                   height: 150,
-                   child:
-                   Image.asset("./assets/home.png", fit: BoxFit.fill,),
-                 ),
-
-                 Text('name'),
-                 Text('modify'),
-               ],
-             ),
-           ),
-         ),
+          Container(
+            child: Padding(
+              padding: const EdgeInsets.all(50.0),
+              child: Column(
+                children: <Widget>[
+                  Container(
+                      width: 150,
+                      height: 150,
+                      child: Image.asset(
+                        "./assets/home.png",
+                        fit: BoxFit.fill,
+                      )),
+                  Text('name'),
+                  FlatButton(
+                    onPressed: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => ProfileModify()));
+                    },
+                    child: Text('modify'),
+                  ),
+                ],
+              ),
+            ),
+          ),
           Divider(
             thickness: 2,
             color: Colors.grey[200],
