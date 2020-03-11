@@ -1,4 +1,5 @@
 import 'package:diet_camera_clone/pages/email.dart';
+import 'package:diet_camera_clone/pages/height_page.dart';
 import 'package:flutter/material.dart';
 
 class ProfileModify extends StatelessWidget {
@@ -35,7 +36,7 @@ class ProfileModify extends StatelessWidget {
               trailing: Text('email'),
               onTap: () {
                 Navigator.push(
-                    context, MaterialPageRoute(builder: (context) => Email()));
+                    context, MaterialPageRoute(builder: (context) => EmailPage()));
               },
             ),
             Divider(
@@ -43,21 +44,38 @@ class ProfileModify extends StatelessWidget {
             ),
             ListTile(
               title: Text('age'),
+              trailing: Text('1231'),
+              onTap: () {},
             ),
             Divider(
               thickness: 2,
             ),
             ListTile(
               title: Text('sex'),
+              trailing: Text('1231'),
+              onTap: () {},
             ),
             Divider(
               thickness: 2,
             ),
             ListTile(
               title: Text('height'),
+              trailing: Text('1231'),
+              onTap: () {Navigator.push(
+                  context, MaterialPageRoute(builder: (context) => HeightPage()));},
             ),
             Divider(
               thickness: 2,
+            ),
+            Container(
+              height: 150,
+              child: Text('asdf'),
+            ),
+            Divider(
+              thickness: 2,
+            ),
+            ListTile(
+              title: Text('logout'),
             ),
           ],
         )

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class Email extends StatelessWidget {
+class EmailPage extends StatelessWidget {
   final TextEditingController _textController = TextEditingController();
   @override
   Widget build(BuildContext context) {
